@@ -92,13 +92,13 @@ const data = {
       ],
     },
     {
-      title: "Documentation",
+      title: "Manage",
       url: "#",
       icon: BookOpen,
       items: [
         {
-          title: "Introduction",
-          url: "#",
+          title: "Wizard",
+          url: "/dashboard/wizard",
         },
         {
           title: "Get Started",

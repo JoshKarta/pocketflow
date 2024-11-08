@@ -1,5 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
-import ThemeSwitchToggle from "@/components/theme-switch-toggle";
+import ThemeSwitchToggle from "@/components/ThemeSwitchToggle";
 import {
   Breadcrumb,
   BreadcrumbItem,
