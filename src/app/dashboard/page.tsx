@@ -4,6 +4,7 @@ import { UserSettings } from "@prisma/client";
 import { getUserSettings } from "@/server/userSettings";
 import { Button } from "@/components/ui/button";
 import CreateTransactionDialog from "./_components/CreateTransactionDialog";
+import Overview from "./_components/Overview";
 
 export default async function page() {
   const user = await getUser();
@@ -40,6 +41,7 @@ export default async function page() {
           </div>
         </div>
       </div>
+      <Overview userSettings={UserSettings} />
     </div>
   );
 }
