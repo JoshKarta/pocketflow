@@ -5,6 +5,7 @@ import { UserSettings } from "@prisma/client";
 import { differenceInDays, startOfMonth } from "date-fns";
 import React from "react";
 import { toast } from "sonner";
+import StatsCards from "./StatsCards";
 
 interface Props {
   userSettings: UserSettings; // Replace with your own UserSettings interface
@@ -30,7 +31,7 @@ export default function Overview({ userSettings }: Props) {
 
               if (differenceInDays(to, from) > MAX_DATE_RANGE_DAYS) {
                 toast.error(
-                  `The selected date range is too big. Max allowed rang is ${MAX_DATE_RANGE_DAYS} day!`
+                  `The selected date range is too big. Max allowed range is ${MAX_DATE_RANGE_DAYS} day!`
                 );
                 return;
               }
@@ -39,6 +40,17 @@ export default function Overview({ userSettings }: Props) {
           />
         </div>
       </div>
+
+      <StatsCards
+        userSettings={userSettings}
+        from={dateRange.from}
+        to={dateRange.to}
+      />
+      <CategoriesStats
+        userSettings={userSettings}
+        from={dateRange.from}
+        to={dateRange.to}
+      />
     </>
   );
 }
