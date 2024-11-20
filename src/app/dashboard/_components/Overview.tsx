@@ -6,6 +6,7 @@ import { differenceInDays, startOfMonth } from "date-fns";
 import React from "react";
 import { toast } from "sonner";
 import StatsCards from "./StatsCards";
+import CategoriesStats from "./CategoriesStats";
 
 interface Props {
   userSettings: UserSettings; // Replace with your own UserSettings interface
